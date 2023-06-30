@@ -1,19 +1,23 @@
 package com.dexter.core;
-import java.time.LocalTime;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+
 @Service
+@Slf4j
 public class HelloService {
- 
  public HelloService()
  {
-  System.out.println("HelloService Created "+this.hashCode());
+  log.info("HelloService Created {}",this.hashCode());
  }
  
  public String helloServiceTest()
  {
-  return "Hello Service test message "+LocalTime.now();
+  LocalDateTime currentDateTime= LocalDateTime.now();
+  log.info("HelloService test {}",currentDateTime);
+  return String.format("Hello Service test message. Server Time %s",currentDateTime);
  }
 
 }
