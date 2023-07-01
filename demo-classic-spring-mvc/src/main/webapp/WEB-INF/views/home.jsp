@@ -7,23 +7,32 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Home</title>
+<link rel="stylesheet" href="resources/css/main.css">
 </head>
 <body>
-	<div style="align-content: center">
+	<div class="container">
 		<h1>Hello Spring MVC</h1>
-		<h3>
+
 			<c:if test="${not empty msg}">
+			<div class="message">
 				${msg}
-		</c:if>
+			</div>
+		    </c:if>
+
+			<c:if test="${not empty error}">
+			<div class="error">
+				${error}
+			</div>
+		    </c:if>
+
+
 			<form:form action="addUser" method="post" modelAttribute="user">
-				<input type="text" name="name" placeholder="Enter Name" path="name" />
-				<br/>
-				<input type="text" name="age" placeholder="Enter age" path="age"/>
-				</br>
-				<input type="submit" value="Add User" />&nbsp;
-				<input type="reset" value="Clear" />
+				<input type="text" class="input-text" name="name" placeholder="Enter Name" path="name" />
+				<input type="text" class="input-text" name="age" placeholder="Enter age" path="age"/>
+				<input type="submit" class="btn-primary"value="Add User" />
+				<input type="reset" class="btn-secondary"value="Clear" />
 			</form:form>
-		</h3>
+
 	</div>
 </body>
 </html>
