@@ -25,12 +25,18 @@
 			</div>
 		    </c:if>
 
+            <form:form action="addUser" method="post" modelAttribute="user">
+                <form:label path="name" cssClass="input-label">Name</form:label>
+                <form:input path="name" cssClass="input-text" placeholder="Enter Name" />
 
-			<form:form action="addUser" method="post" modelAttribute="user">
-				<input type="text" class="input-text" name="name" placeholder="Enter Name" path="name" />
-				<input type="text" class="input-text" name="age" placeholder="Enter age" path="age"/>
+                <form:label path="age" cssClass="input-label">Age</form:label>
+                <form:input path="age" cssClass="input-text" placeholder="Enter age" />
+
+                <form:label path="doj" cssClass="input-label">Date of Joining</form:label>
+                <form:input path="doj" cssClass="input-text" placeholder="Enter date of joining" />
+
 				<input type="submit" class="btn-primary"value="Add User" />
-				<input type="reset" class="btn-secondary"value="Clear" />
+				<input type="reset" class="btn-secondary"value="Reset" />
 			</form:form>
 
 	</div>
