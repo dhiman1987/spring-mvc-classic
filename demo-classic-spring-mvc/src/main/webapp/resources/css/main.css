@@ -32,6 +32,7 @@ h3 {
 
 .error {
     padding: 0.5em;
+    margin: 0.5em;
     font-size: 0.8em;
     color: #ee005d;
     background-color: #ffe1ee;

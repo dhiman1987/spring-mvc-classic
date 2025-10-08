@@ -19,21 +19,18 @@
 			</div>
 		    </c:if>
 
-			<c:if test="${not empty error}">
-			<div class="error">
-				${error}
-			</div>
-		    </c:if>
-
             <form:form action="addUser" method="post" modelAttribute="user">
                 <form:label path="name" cssClass="input-label">Name</form:label>
+                <form:errors path="name" cssClass="error"/>
                 <form:input path="name" cssClass="input-text" placeholder="Enter Name" />
 
                 <form:label path="age" cssClass="input-label">Age</form:label>
                 <form:input path="age" cssClass="input-text" placeholder="Enter age" />
+                <form:errors path="age" cssClass="error"/>
 
                 <form:label path="doj" cssClass="input-label">Date of Joining</form:label>
                 <form:input path="doj" cssClass="input-text" placeholder="Enter date of joining" />
+                <form:errors path="doj" cssClass="error"/>
 
 				<input type="submit" class="btn-primary"value="Add User" />
 				<input type="reset" class="btn-secondary"value="Reset" />
